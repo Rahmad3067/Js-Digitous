@@ -27,3 +27,15 @@ console.log(letters);
 var age = 20;
 var template = (`i'm ${age} years old`);
 console.log(template);
+
+// Bonus
+
+var string01 = 'hello world ' + 
+"how are you!?";
+
+console.log(string01);
+
+var firstName = "Rahmad ";
+var lastName = 'Abuzar';
+var fullName = firstName + lastName;
+console.log(fullName);
