@@ -81,3 +81,26 @@ switch (month) {
 }
 
 // bonus3
+
+// if( roundedNumber % 1 >= 0.5 ) Another way
+
+var roundedNumber = 12.4;
+if (((roundedNumber - Math.floor(roundedNumber))) >= 0.5) { 
+    console.log(Math.ceil(roundedNumber)) 
+} else {
+    console.log(Math.floor(roundedNumber))
+}
+var str = roundedNumber.toString()
+
+var decimal = str.substring(str.indexOf(".");
+    console.log(decimal);
+    if ( decimal >= 5 ) {
+        console.log(Math.ceil(roundedNumber))
+    } else {
+        console.log(Math.floor(roundedNumber))
+    }
+
+// bonus4
+
+
+
