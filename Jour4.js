@@ -84,6 +84,47 @@ function format (num){
 console.log(format(4700));
 
 
-// 
+// Bonus
+// function generatePasszord (num){
+//     var characters = "Abcdefghijklmnopqrstuvwxyz";
+//     var characterslength = characters.length;
+//     for (var i = 0; i < characters*num; i++) {
+       
+
+// }
 
 
+
+
+// function generatePasszord(num) {
+//     var result           = '';
+//     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     var charactersnum = characters.num;
+//     for ( var i = 0; i <= num; i++ ) {
+//       result += characters.charAt(Math.floor(Math.random() * 
+//  charactersnum));
+//    }
+//    return result;
+// }
+
+// console.log(generatePasszord(15));
+
+
+var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var result = '';
+
+function generatePasszord(num) {
+    if ( num < 6 || num > 15) {
+        console.log("error")
+    }else {
+    for ( var i = 0; i < num; i++ ) {
+        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+    }
+    return result.toLocaleUpperCase();}
+    
+    
+    
+    
+}
+
+console.log(generatePasszord(7));
