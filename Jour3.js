@@ -28,7 +28,7 @@ var limit = 10;
 //     console.log(i);
 // }
 
-for (var i = 0; i < limit + 1 ; i++) {
+for (var i = 0; i <= limit; i++) {
     total =  total+i
     console.log(total)
 }
@@ -44,12 +44,12 @@ for(var i = sentence.length - 1; i >=0; i-- ){
 
 // Bonus
 for(var i = 1; i <= 100; i++){
-    if ( i % 3 === 0){
-        console.log("fizz")
+    if ( i % 3 === 0 && i % 5 === 0){
+        console.log("fizzbuzz")
     }else if (i % 5 === 0){
         console.log("buzz")
-    }else if(i % 3 === 0 && i % 5 === 0){
-        console.log("fizzbuzz")
+    }else if(i % 3 === 0 ){
+        console.log("fizz")
     }else{
         console.log(i)
     }
@@ -80,11 +80,10 @@ for (var i = 0; i < 20; i++){
 }
 console.log(empyTab);
 
-empyTab;
-var largest = 0;
-for ( i=0; i<=largest; i++ ){
+var largest = empyTab[0];
+for ( i=0; i < empyTab.length; i++ ){
 
-    if ( empyTab[i] > largest ) {
+    if ( largest = empyTab[i] ) {
 
         var largest = empyTab[i];
     }
