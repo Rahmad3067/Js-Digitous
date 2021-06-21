@@ -2,16 +2,17 @@ var cat = {
     name:"Garfield",
     age :  3,
     isCute : true,
-
-
 }
 
 console.log(cat);
 console.log(cat.age);
 var cute = cat.isCute;
+var cute2 = "isCute"
 
 if ( cute === true ) {
     console.log("So cute !");
+}else{
+    console.log("You're cat is not cute");
 }
 
 // ex2
@@ -25,7 +26,9 @@ var cat2 = {
 var cats = [cat2, cat];
 console.log(cats);
 console.log(cats[1].age);
+console.log(cats[1]["age"]);
 console.log(cats[0].isCute);
+console.log(cats[0]["isCute"]);
 
 // ex3
 function checkIfEven (num) {
@@ -35,7 +38,7 @@ function checkIfEven (num) {
         console.log("odd")
     }
 }
-checkIfEven(2);
+checkIfEven(99);
 
 // ex4
 
@@ -65,66 +68,56 @@ addUp(12);
 console.log(total);
 
 // ex6 
-
-
-
-
-
-
-
 function format (num){
    
       var hours   = Math.floor(num / 3600);
       var minutes = Math.floor(num % 3600 / 60);
       var seconds = Math.floor(num % 3600 % 60);
 
-   return ('0' + hours)+ ":" + ('0' + minutes)+ ":" +('0' + seconds).slice(-2);
+   return ('0' + hours)+ ":" + ('0' + minutes).slice(-2)+ ":" +('0' + seconds).slice(-2);
+      
 
 }
-console.log(format(4700));
+console.log(format(7400));
 
 
-// Bonus
-// function generatePasszord (num){
-//     var characters = "Abcdefghijklmnopqrstuvwxyz";
-//     var characterslength = characters.length;
-//     for (var i = 0; i < characters*num; i++) {
-       
+// Bonus"
 
-// }
-
-
-
+// format-1
+// var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+// var result = '';
 
 // function generatePasszord(num) {
-//     var result           = '';
-//     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-//     var charactersnum = characters.num;
-//     for ( var i = 0; i <= num; i++ ) {
-//       result += characters.charAt(Math.floor(Math.random() * 
-//  charactersnum));
-//    }
-//    return result;
-// }
+//     if ( num < 6 || num > 15) {
+//         return "error";
+//     }
+//     for ( var i = 0; i < num; i++ ) {
+//         result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+//     }
+//     return result.toLocaleUpperCase();}
+    
+    
+    
+    
 
-// console.log(generatePasszord(15));
+
+// console.log(generatePasszord(22));
+
+// format-2
 
 
-var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-var result = '';
-
-function generatePasszord(num) {
-    if ( num < 6 || num > 15) {
-        console.log("error")
-    }else {
-    for ( var i = 0; i < num; i++ ) {
-        result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+function generatePassword (num){
+    if (num < 6 || num > 15) {
+        return "error";
     }
-    return result.toLocaleUpperCase();}
-    
-    
-    
-    
+    letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    password = "";
+    for (let i = 0; i <= num; i++ ){
+        let index = Math.floor(Math.random() * letters.length);
+        password+= letters[index];
+    }
+    return password;
 }
 
-console.log(generatePasszord(7));
+console.log('');
+console.log(generatePassword(8));
