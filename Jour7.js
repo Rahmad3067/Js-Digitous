@@ -50,7 +50,14 @@ var numbers = array.filter(function (num) {
 })
 console.log(numbers);
 
-// EX05
+//EXO 5
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8],
+    even = numbers.filter(num => num % 2 == 0);
+    console.log(even);
+
+
+
+// EX06
 var cakes = [
 	{
 		name: "cake",
@@ -90,3 +97,7 @@ var noChoclate = cholate.map(function (num1) {
     return (num1)
 })
 console.log(noChoclate)
+
+
+// Bonus
+
